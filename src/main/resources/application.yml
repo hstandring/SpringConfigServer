@@ -6,6 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: file://C:/Users/Heather/Git/SpringCloudConfig
-          #uri: https://github.com/hstandring/SpringCloudConfigRepo.git
-      #label: develop
+          #uri: file://C:/Users/Heather/Git/SpringCloudConfig
+          uri: https://github.com/hstandring/SpringCloudConfig.git
