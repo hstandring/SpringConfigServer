@@ -3,13 +3,14 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext {
-        springBootVersion = '1.4.3.RELEASE'
+        springBootVersion = '1.5.0.RELEASE'
     }
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath('io.spring.gradle:dependency-management-plugin:0.5.4.RELEASE')
     }
 }
 
@@ -27,5 +28,12 @@ repositories {
 dependencies {
     compile('org.springframework.cloud:spring-cloud-config-server:1.4.3.RELEASE')
 }
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Edgware.SR3"
+    }
+}
+
 
 
